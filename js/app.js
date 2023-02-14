@@ -48,7 +48,7 @@ let seattle = {
   minHrCust: 23,
   maxHrCust: 65,
   avgCookiePerCust: 6.3,
-  let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'],
+  let hours =['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
   render: function () {
     let articleElem = document.createElement('article');
     salmonCookiesProfile.appendChild(articleElem);
@@ -60,15 +60,17 @@ let seattle = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for (let i = 0; i < this.hours.length; i++){
+    for (let i = 0; i < this.hours.length; i++) {
       let liElem = document.createElement('li');
       liElem.textContent = this.hours[i];
       ulElem.appendChild(liElem);
+
+  // randomHourlyCustomer(this.minHrCust, this.maxHrCust);
     }
   }
-}
+};
 
-// };
+// calculation this.cookiesBought.push();
 
 // let tokyo = {
 //   name: 'Tokyo',
