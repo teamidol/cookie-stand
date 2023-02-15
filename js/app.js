@@ -1,77 +1,46 @@
 'use strict'
 // ***************** GLOBALS ******************
-let salmonCookiesProfile = document.getElementById('salmon-cookies-profiles');
+let salmonCookiesProfile = document.getElementById('salmon-cookies-profile');
 
-console.dir(salmonCookiesProfile);
-
-
-
-// function randomHourlyCustomer(this.minHrCust, this.maxHrCust) {
-//   return Math.floor(Math.random() * (this.maxHrCust - this.minHrCust + 1) + this.minHrCust);
-// }
-
-
-
-
-
-
-// let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'];
-
-
-// // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ( my code ) ^^^^^^^^^^^^^^^^^^^
-
-
-// let ulElem = document.createElement('ul');
-//     articleElem.appendChild(ulElem);
-
-//     for(let i = 0; i < this.interests.length; i++){
-//       let liElem = document.createElement('li');
-//       liElem.textContent = this.interests[i];
-//       ulElem.appendChild(liElem);
-//     }
-
-//     let pElem = document.createElement('p');
-//     pElem.textContent = this.age;
-//     articleElem.appendChild(pElem);
-
-
-//     let imgElem = document.createElement('img');
-//     imgElem.src = this.photo;
-//     imgElem.alt = `${this.name} is an adorable ${this.age} month old kitten.`;
-//     articleElem.appendChild(imgElem);
-
-
-// // vvvvvvvvvvvvvvvvvvvvvv ( my code ) vvvvvvvvvvvvvvvvvvvvvv    
-
-let seattle = {
-  name: 'Seattle',
-  minHrCust: 23,
-  maxHrCust: 65,
-  avgCookiePerCust: 6.3,
-  let hours =['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-  render: function () {
-    let articleElem = document.createElement('article');
-    salmonCookiesProfile.appendChild(articleElem);
-
-    let h2Elem = document.createElement('h2');
-    h2Elem.textContent = this.name;
-    articleElem.appendChild(h2Elem);
-
-    let ulElem = document.createElement('ul');
-    articleElem.appendChild(ulElem);
-
-    for (let i = 0; i < this.hours.length; i++) {
-      let liElem = document.createElement('li');
-      liElem.textContent = this.hours[i];
-      ulElem.appendChild(liElem);
-
-  // randomHourlyCustomer(this.minHrCust, this.maxHrCust);
+console.dir(salmonCookiesProfile);   
+  
+  let seattle = {
+    name: 'Seattle',
+    minHrCust: 23,
+    maxHrCust: 65,
+    avgCookiePerCust: 6.3,
+    
+    render: function () {
+      let articleElem = document.createElement('article');
+      salmonCookiesProfile.appendChild(articleElem);
+      
+      let h2Elem = document.createElement('h2');
+      h2Elem.textContent = this.name;
+      articleElem.appendChild(h2Elem);
+      
+      let ulElem = document.createElement('ul');
+      articleElem.appendChild(ulElem);
+      
+      let ilElem = document.createElement('li');
+      ulElem.appendChild(ilElem);
+      
+      // for (let i = 0; i < this.hours.length; i++) {
+      //     let liElem = document.createElement('li');
+      //     liElem.textContent = this.hours[i];
+      //     ulElem.appendChild(liElem);
     }
   }
-};
+  
+  seattle.render();
+  console.log(seattle);
+// function randomHourlyCustomer(minHrCust, maxHrCust) {
+//   return Math.floor(Math.random() * (this.maxHrCust - this.minHrCust + 1) + this.minHrCust);
+// }
+    
+// let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'];
 
 // calculation this.cookiesBought.push();
-
+    
 // let tokyo = {
 //   name: 'Tokyo',
 //   minHrCust: 3,
@@ -90,8 +59,6 @@ let seattle = {
 // };
 
 // **************** EXECUTABLE CODE *******************
-seattle.render();
-console.log(seattle);
 // tokyo.render();
 // console.log(tokyo);
 // dubai.render();
@@ -235,3 +202,46 @@ console.log(seattle);
 //     this.age = `${this.randomAge(3,12)} months`;
 //   },
 //   render: function(){
+
+
+
+
+///////////////////// (classmate code, start)
+
+// cookieSoldPerHour: [ ],
+// cookiesCustomerPerHour: [ ],
+// dailySoldTotal: 0,
+// setCookiesTotal() {
+//   for (let i = 0; i  hours.length; i++){
+//     this.dailySoldTotal += this.cookieSoldPerHour[i];
+
+//   }
+// }
+// setCustomerPerHour(){
+//   for (let i = 0; i < hours.length; i++){
+//     this
+//   }
+// }
+
+///////////////////// (classmate code, end)
+
+
+// let ulElem = document.createElement('ul');
+//     articleElem.appendChild(ulElem);
+
+//     for(let i = 0; i < this.interests.length; i++){
+  //       let liElem = document.createElement('li');
+  //       liElem.textContent = this.interests[i];
+  //       ulElem.appendChild(liElem);
+//     }
+  
+  //     let pElem = document.createElement('p');
+  //     pElem.textContent = this.age;
+  //     articleElem.appendChild(pElem);
+  
+  
+  //     let imgElem = document.createElement('img');
+  //     imgElem.src = this.photo;
+  //     imgElem.alt = `${this.name} is an adorable ${this.age} month old kitten.`;
+  //     articleElem.appendChild(imgElem);
+  

@@ -1,32 +1,15 @@
-/* h1 {
-  background-color: green;
-  color: lightgreen;
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  color: green;
 }
 
-body {
-  background-color: darkgray;
-  color: white;
+ul {
+  font-family: sans-serif, Arial, Helvetica;
+  color: purple;
 }
 
-div {
-
-   padding: 10px;
+body { 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   color: blue;
+   background-color: lightblue;
 }
-
-.experience {
-
-  background-color: darkred;
-}
-
-.top10 {
-  background-color: blue
-}
-
-img {
-
-  width: 50%;
-  position: absolute;
-  width: 800px;
-  left: 500px;
-  top:  175px;
-} */
