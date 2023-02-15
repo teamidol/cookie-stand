@@ -1,247 +1,201 @@
 'use strict'
-// ***************** GLOBALS ******************
+
 let salmonCookiesProfile = document.getElementById('salmon-cookies-profile');
 
-console.dir(salmonCookiesProfile);   
-  
-  let seattle = {
-    name: 'Seattle',
-    minHrCust: 23,
-    maxHrCust: 65,
-    avgCookiePerCust: 6.3,
+console.dir(salmonCookiesProfile);
+
+let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+//  ************************* (stores) ********************
+let seattle = {
+  name: 'Seattle',
+  minHrCust: 23,
+  maxHrCust: 65,
+  avgCookiePerCust: 6.3,
+  cookiesSold: [],
+  totalCookies: 0,
+
+  render: function () {
+    let articleElem = document.createElement('article');
+    salmonCookiesProfile.appendChild(articleElem);
+
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.name;
+    articleElem.appendChild(h2Elem);
+
+    let ulElem = document.createElement('ul');
+    articleElem.appendChild(ulElem);
+
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesSold.push(Math.floor(randomHourlyCustomer(this.minHrCust, this.maxHrCust) * this.avgCookiePerCust));
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}: ${this.cookiesSold[i]}`;
+      ulElem.appendChild(liElem);
+      
+      this.totalCookies += this.cookiesSold[i];
+    };
     
-    render: function () {
-      let articleElem = document.createElement('article');
-      salmonCookiesProfile.appendChild(articleElem);
-      
-      let h2Elem = document.createElement('h2');
-      h2Elem.textContent = this.name;
-      articleElem.appendChild(h2Elem);
-      
-      let ulElem = document.createElement('ul');
-      articleElem.appendChild(ulElem);
-      
-      let ilElem = document.createElement('li');
-      ulElem.appendChild(ilElem);
-      
-      // for (let i = 0; i < this.hours.length; i++) {
-      //     let liElem = document.createElement('li');
-      //     liElem.textContent = this.hours[i];
-      //     ulElem.appendChild(liElem);
-    }
+    let totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${this.totalCookies}`;
+    articleElem.appendChild(totalLi);
   }
-  
-  seattle.render();
-  console.log(seattle);
-// function randomHourlyCustomer(minHrCust, maxHrCust) {
-//   return Math.floor(Math.random() * (this.maxHrCust - this.minHrCust + 1) + this.minHrCust);
-// }
+}
+
+let tokyo = {
+  name: 'Tokyo',
+  minHrCust: 3,
+  maxHrCust: 24,
+  avgCookiePerCust: 1.2,
+  cookiesSold: [],
+  totalCookies: 0,
+
+  render: function () {
+    let articleElem = document.createElement('article');
+    salmonCookiesProfile.appendChild(articleElem);
+
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.name;
+    articleElem.appendChild(h2Elem);
+
+    let ulElem = document.createElement('ul');
+    articleElem.appendChild(ulElem);
     
-// let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'];
-
-// calculation this.cookiesBought.push();
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesSold.push(Math.floor(randomHourlyCustomer(this.minHrCust, this.maxHrCust) * this.avgCookiePerCust));
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}: ${this.cookiesSold[i]}`;
+      ulElem.appendChild(liElem);
+      
+      this.totalCookies += this.cookiesSold[i];
+    };
     
-// let tokyo = {
-//   name: 'Tokyo',
-//   minHrCust: 3,
-//   maxHrCust: 24,
-//   avgCookiePerCust: 1.2,
-//   cookiesBought: [],
-//   render: function () {
-//     let articleElem = document.createElement('article');
-//     salmonCookiesProfile.appendChild(articleElem);
+    let totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${this.totalCookies}`;
+    articleElem.appendChild(totalLi);
+  }
+}
 
-//     let h2Elem = document.createElement('h2');
-//     h2Elem.textContent = this.name;
-//     articleElem.appendChild(h2Elem);
-//   }
+let dubai = {
+  name: 'Dubai',
+  minHrCust: 11,
+  maxHrCust: 38,
+  avgCookiePerCust: 3.7,
+  cookiesSold: [],
+  totalCookies: 0,
 
-// };
+  render: function () {
+    let articleElem = document.createElement('article');
+    salmonCookiesProfile.appendChild(articleElem);
 
-// **************** EXECUTABLE CODE *******************
-// tokyo.render();
-// console.log(tokyo);
-// dubai.render();
-// console.log(dubai);
-// paris.render();
-// console.log(paris);
-// lima.render();
-// console.log(lima);
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.name;
+    articleElem.appendChild(h2Elem);
 
+    let ulElem = document.createElement('ul');
+    articleElem.appendChild(ulElem);
 
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesSold.push(Math.floor(randomHourlyCustomer(this.minHrCust, this.maxHrCust) * this.avgCookiePerCust));
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}: ${this.cookiesSold[i]}`;
+      ulElem.appendChild(liElem);
 
+      this.totalCookies += this.cookiesSold[i];
+    };
 
+    let totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${this.totalCookies}`;
+    articleElem.appendChild(totalLi);
+  }
+}
 
+let paris = {
+  name: 'Paris',
+  minHrCust: 20,
+  maxHrCust: 38,
+  avgCookiePerCust: 2.3,
+  cookiesSold: [],
+  totalCookies: 0,
 
-// // vvvvvvvvvvvvvvvvvvvvvv ( lecture notes ) vvvvvvvvvvvvvvvvvvvvv
+  render: function () {
+    let articleElem = document.createElement('article');
+    salmonCookiesProfile.appendChild(articleElem);
 
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.name;
+    articleElem.appendChild(h2Elem);
 
+    let ulElem = document.createElement('ul');
+    articleElem.appendChild(ulElem);
 
-// // ********** GLOBALS **************
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesSold.push(Math.floor(randomHourlyCustomer(this.minHrCust, this.maxHrCust) * this.avgCookiePerCust));
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}: ${this.cookiesSold[i]}`;
+      ulElem.appendChild(liElem);
 
-// let kittenSection = document.getElementById('kitten-profiles');
+      this.totalCookies += this.cookiesSold[i];
+    };
 
-// console.dir(kittenSection);
+    let totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${this.totalCookies}`;
+    articleElem.appendChild(totalLi);
+  }
+}
 
-// // ********** HELPER FUNCTIONS/UTILITES *********
+let lima = {
+  name: 'Lima',
+  minHrCust: 2,
+  maxHrCust: 16,
+  avgCookiePerCust: 4.6,
+  cookiesSold: [],
+  totalCookies: 0,
 
-// function randomAge(min,max){
-//   // got this from MDN docs
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
+  render: function () {
+    let articleElem = document.createElement('article');
+    salmonCookiesProfile.appendChild(articleElem);
 
-// // ********** OBJECT LITERALS **********
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.name;
+    articleElem.appendChild(h2Elem);
 
+    let ulElem = document.createElement('ul');
+    articleElem.appendChild(ulElem);
 
-// let frankie = {
-//   name: 'Frankie',
-//   age: 0,
-//   interests: ['wet food', 'cat nip', 'mice toys'],
-//   isGoodWithCats: true,
-//   isGoodWithDogs: true,
-//   isGoodWithKids: true,
-//   photo: 'img/frankie.jpeg',
-//   getAge: function(){
-//     this.age = `${randomAge(3,12)} months`;
-//   },
-//   render: function(){
-//     // ***** DOM MANIPULATION *****
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesSold.push(Math.floor(randomHourlyCustomer(this.minHrCust, this.maxHrCust) * this.avgCookiePerCust));
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]}: ${this.cookiesSold[i]}`;
+      ulElem.appendChild(liElem);
 
-//     // STEP 2: Create element
-//     let articleElem = document.createElement('article');
-//     // STEP 3: Add it to the dom
-//     kittenSection.appendChild(articleElem);
+      this.totalCookies += this.cookiesSold[i];
+    };
 
-//     let h2Elem = document.createElement('h2');
-//     h2Elem.textContent = this.name;
-//     articleElem.appendChild(h2Elem);
+    let totalLi = document.createElement('li');
+    totalLi.textContent = `Total: ${this.totalCookies}`;
+    articleElem.appendChild(totalLi);
+  }
+}
 
+// ******************* (renders and functions, start) **************
+seattle.render();
+console.log(seattle);
+tokyo.render();
+console.log(tokyo);
+dubai.render();
+console.log(dubai);
+paris.render();
+console.log(paris);
+lima.render();
+console.log(lima);
 
-//     // ! USEFUL FOR LAB
-//     let ulElem = document.createElement('ul');
-//     articleElem.appendChild(ulElem);
-
-//     for(let i = 0; i < this.interests.length; i++){
-//       let liElem = document.createElement('li');
-//       liElem.textContent = this.interests[i];
-//       ulElem.appendChild(liElem);
-//     }
-
-//     let pElem = document.createElement('p');
-//     pElem.textContent = this.age;
-//     articleElem.appendChild(pElem);
-
-
-//     let imgElem = document.createElement('img');
-//     imgElem.src = this.photo;
-//     imgElem.alt = `${this.name} is an adorable ${this.age} month old kitten.`;
-//     articleElem.appendChild(imgElem);
-//   }
-// };
-
-
-// let jumper = {
-//   name: 'Jumper',
-//   age: 0,
-//   interests: ['dry food', 'treats', 'fish toys'],
-//   isGoodWithCats: true,
-//   isGoodWithDogs: false,
-//   isGoodWithKids: false,
-//   photo: 'img/jumper.jpeg',
-//   randomAge: function(min, max){
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-//   },
-//   getAge: function(){
-//     this.age = `${this.randomAge(3,12)} months`;
-//   },
-//   render: function(){
-//     // ***** DOM MANIPULATION *****
-
-//     // STEP 2: Create element
-//     let articleElem = document.createElement('article');
-//     // STEP 3: Add it to the dom
-//     kittenSection.appendChild(articleElem);
-
-//     let h2Elem = document.createElement('h2');
-//     h2Elem.textContent = this.name;
-//     articleElem.appendChild(h2Elem);
-
-//     let ulElem = document.createElement('ul');
-//     articleElem.appendChild(ulElem);
-
-//     for(let i = 0; i < this.interests.length; i++){
-//       let liElem = document.createElement('li');
-//       liElem.textContent = this.interests[i];
-//       ulElem.appendChild(liElem);
-//     }
-
-//     let pElem = document.createElement('p');
-//     pElem.textContent = this.age;
-//     articleElem.appendChild(pElem);
-
-
-//     let imgElem = document.createElement('img');
-//     imgElem.src = this.photo;
-//     imgElem.alt = `${this.name} is an adorable ${this.age} month old kitten.`;
-//     articleElem.appendChild(imgElem);
-//   }
-// };
-
-// let serena = {
-//   name: 'Serena',
-//   age: 0,
-//   interests: ['mice', 'lasers', 'hunting'],
-//   isGoodWithCats: false,
-//   isGoodWithDogs: false,
-//   isGoodWithKids: false,
-//   photo: 'img/serena.jpeg',
-//   randomAge: function(min, max){
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-//   },
-//   getAge: function(){
-//     this.age = `${this.randomAge(3,12)} months`;
-//   },
-//   render: function(){
+function randomHourlyCustomer(minHrCust, maxHrCust) {
+  return Math.floor(Math.random() * (maxHrCust - minHrCust + 1) + minHrCust);
+}
 
 
 
-
-///////////////////// (classmate code, start)
-
-// cookieSoldPerHour: [ ],
-// cookiesCustomerPerHour: [ ],
-// dailySoldTotal: 0,
-// setCookiesTotal() {
-//   for (let i = 0; i  hours.length; i++){
-//     this.dailySoldTotal += this.cookieSoldPerHour[i];
-
-//   }
-// }
-// setCustomerPerHour(){
-//   for (let i = 0; i < hours.length; i++){
-//     this
-//   }
-// }
-
-///////////////////// (classmate code, end)
+// ******************** (renders and functions, end) ***************
 
 
-// let ulElem = document.createElement('ul');
-//     articleElem.appendChild(ulElem);
 
-//     for(let i = 0; i < this.interests.length; i++){
-  //       let liElem = document.createElement('li');
-  //       liElem.textContent = this.interests[i];
-  //       ulElem.appendChild(liElem);
-//     }
-  
-  //     let pElem = document.createElement('p');
-  //     pElem.textContent = this.age;
-  //     articleElem.appendChild(pElem);
-  
-  
-  //     let imgElem = document.createElement('img');
-  //     imgElem.src = this.photo;
-  //     imgElem.alt = `${this.name} is an adorable ${this.age} month old kitten.`;
-  //     articleElem.appendChild(imgElem);
-  
