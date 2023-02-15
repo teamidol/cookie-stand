@@ -1,4 +1,4 @@
-# cookie-stand
+# Cookie-Stand
 
 ![lighthouse homepage](img/lighthouse-homepage.png)
 
