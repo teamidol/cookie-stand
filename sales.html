@@ -6,19 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="rese-css" href = "css/reset.css">
-  <link rel="stylesheet" href = "css/style.css">
+  <link rel="stylesheet" href = "css/style-sales.css">
 </head>
 <body>
   <header></header>
   <main>
     <h1>Salmon Cookies Stats</h1>
     <a href = "index.html">HOMEPAGE</a>
+    
+    <article>
+    <img id="chinook" src="img/chinook.jpg">
+  </article> 
+  <article>
     <section id = "salmon-cookies-profile"></section>
+</article>
 
+<form id = "franchForm">Franchise Form
+  <fieldset>
+    <legend>Location</legend>
+    <label for = "location"></label>
+     <input id = "location" placeholder = "your area of operation" type="text" name="location">
+  </fieldset>
+  <fieldset>
+    <legend>Min Customer Per Hour</legend>
+    <label for = "minCust"></label>
+     <input id = "minCust" placeholder = "min customer per hour" type="number" name="minCust">
+  </fieldset>
+  
+  <fieldset>
+    <legend>Max Customer Per Hour</legend>
+    <label for = "maxCust"></label>
+     <input id = "maxCust" placeholder = "max customer per hour" type="number" name="maxCust">
+  </fieldset>
 
+  <fieldset>
+    <legend>Avg Cookies Per Customer</legend>
+    <label for = "avgCookiesBought"></label>
+     <input id = "avgCookiesBought" placeholder = "average cookie per customer" type="number" name="avgCookiesBought">
+  </fieldset>
 
-
-
+  <fieldset>
+    <legend>Re-Supply Orders</legend>
+    <label for = "supplyOrderr"></label>
+     <select id = "supplyOrder" name="supplyOrder">
+      <option value="noNeedForNow">No Need For Now</option>
+      <option value="ingredients">Ingredients</option>
+      <option value="merchandise">Merchandise</option>
+  </fieldset>
+ 
+  <input type="submit" value ="Submit">
+ 
+  </form>
   </main>
   <footer>
     <script src="js/app.js"></script>

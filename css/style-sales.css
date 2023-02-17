@@ -3,21 +3,6 @@ h1, h2, h3, h4, h5, h6 {
   color: green;
 }
 
-article {
-font-size: 20px;
-
-}
-
-#locations {
- 
-}
-
-#family-img {
-width: 800px;
-
-}
-
-
 ul {
   font-family: sans-serif, Arial, Helvetica;
   color: purple;
@@ -27,5 +12,4 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
    color: blue;
    background-color: lightblue;
-
 }
