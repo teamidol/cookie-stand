@@ -24,8 +24,7 @@ ul {
 }
 
 body { 
-  font-family: Georgia, 'Times New Roman', Times, serif;
    color: blue;
    background-color: lightblue;
-
+   font-family: 'Open Sans', sans-serif;
 }
